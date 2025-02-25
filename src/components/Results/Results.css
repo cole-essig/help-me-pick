@@ -1,4 +1,15 @@
+@keyframes pulse-shadow {
+  0% {
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  }
+  100% {
+      box-shadow: 0 0 30px rgba(255, 255, 255, 0.7);
+  }
+}
+
 .results {
+  position: absolute;
+  left: calc(33%);
   visibility: hidden;
   transition:  visibility 0.25s linear;
   margin: 20px auto;
@@ -6,10 +17,14 @@
   border-radius: 8px;
   max-width: 33vw;
   width: 100%;
+  animation: pulse-shadow .7s infinite alternate ease-in-out;
 }
 
 .results__display {
+  font-size: 22px;
+  font-weight: 700;
   margin: 8px auto;
+  color: #fff;
 }
 
 .results_on {
