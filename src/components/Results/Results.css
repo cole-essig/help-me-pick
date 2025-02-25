@@ -1,0 +1,17 @@
+.results {
+  visibility: hidden;
+  transition:  visibility 0.25s linear;
+  margin: 20px auto;
+  border: 2px #fff solid;
+  border-radius: 8px;
+  max-width: 33vw;
+  width: 100%;
+}
+
+.results__display {
+  margin: 8px auto;
+}
+
+.results_on {
+    visibility: visible;
+}

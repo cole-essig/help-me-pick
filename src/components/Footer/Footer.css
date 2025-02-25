@@ -1,0 +1,21 @@
+.footer {
+display: flex;
+justify-content: space-between;
+margin: 250px 80px 15px;
+}
+
+.footer__copyright {
+  margin: 0;
+}
+
+.footer__links {
+    margin: auto 0 auto 0;
+    display: flex;
+    gap: 10px;
+}
+
+.footer__links_linkedin {
+    max-width: 30px;
+    width: 100%;
+    min-height: 30px;
+}

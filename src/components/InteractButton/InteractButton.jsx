@@ -1,9 +1,15 @@
 import './InteractButton.css';
 import React from 'react';
 
-function InteractButton({ setMadeChoice }) {
+function InteractButton({ setMadeChoice, setRandomPick, table }) {
+    const getRandomItem = () => {
+        if (table.length > 0) {
+            return table[Math.floor((Math.random()*table.length))];
+        }
+    }
     const buttonSubmit = (e) => {
       e.preventDefault();
+      setRandomPick(getRandomItem())
       setMadeChoice(true);
     }
     return (
