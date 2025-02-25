@@ -1,0 +1,9 @@
+#root {
+  max-width: 100vw;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  background-image: linear-gradient(to right, #2c3e50, #4ca1af);
+  color: #fff;
+  }
