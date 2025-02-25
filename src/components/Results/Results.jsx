@@ -1,16 +1,10 @@
 import './Results.css'
-import React from 'react'
 
-function Results({ table }) {
-    const getRandomItem = () => {
-        if (table.length > 0) {
-            return table[Math.floor((Math.random()*table.length))];
-        }
-    }
-    console.log(getRandomItem())
+function Results({ randomPick, madeChoice }) {
     return (
-        <div className='results'>
-          <p>{getRandomItem()}</p>
+        <div className={`results ${madeChoice ? 'results_on' : ''}` }>
+          <p className='results__display'>{randomPick}</p>
+          <div className='results results__display_pulse_animation'></div>
         </div>
 
     )

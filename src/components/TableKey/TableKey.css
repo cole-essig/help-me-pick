@@ -5,6 +5,17 @@
     max-width: 30vw;
     width: 100%;
     text-overflow: ellipsis;
+    transition: box-shadow .2s linear;
+    transition: background-color .2s linear;
+}
+
+.tablekey_on {
+    background-color: black;
+    box-shadow: 0 0 10px 5px #fff; 
+}
+
+.tablekey:hover {
+    box-shadow: 0 0 10px 5px #fff;
 }
 
 .tablekey__content {
