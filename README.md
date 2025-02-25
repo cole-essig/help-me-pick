@@ -1,8 +1,3 @@
-# React + Vite
+# Help Me Pick
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+A object based table generator that can make decisions easier. Input your key value pairs, then have one picked for you. Desire to add AI integration, table managers, and more complex math with the results. Initial project is simple.
