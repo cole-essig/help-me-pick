@@ -2,7 +2,6 @@ import { useState } from 'react'
 import UserInput from '../UserInput/UserInput';
 import Header from '../Header/Header';
 import Table from '../Table/Table';
-import InteractButton from '../InteractButton/InteractButton';
 import Results from '../Results/Results';
 import Footer from '../Footer/Footer';
 import './App.css'
@@ -20,8 +19,7 @@ function App() {
     <>
       <Header />
       <UserInput getUserInput={getUserInput} />
-      <Table table={table} />
-      <InteractButton setMadeChoice={setMadeChoice} setRandomPick={setRandomPick} table={table} />
+      <Table setMadeChoice={setMadeChoice} setRandomPick={setRandomPick} table={table} />
       {madeChoice && <Results randomPick={randomPick} madeChoice={madeChoice} />}
       <Footer />
     </>

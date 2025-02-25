@@ -1,6 +1,7 @@
 .interact-button {
     position: relative;
     background-color: #000;
+    margin-bottom: 15px;
     max-width: 168px;
     width: 100%;
     min-height: 70px;
