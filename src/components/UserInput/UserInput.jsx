@@ -21,11 +21,11 @@ function UserInput({ getUserInput }) {
                         type='text'
                         className='inputbar__input'
                         id='inputBar'
-                        placeholder='Enter Topic'
+                        placeholder='Enter Option'
                         value={input}
                         onChange={handleInputBarChange}
                     />
-                <button type="submit" className="inputbar__button" >input</button>
+                <button type="submit" className="inputbar__button" >New Option</button>
             </form>
             </>
         )

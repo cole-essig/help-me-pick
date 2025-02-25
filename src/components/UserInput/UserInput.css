@@ -28,8 +28,8 @@
     }
   
   .inputbar__button {
-      background-color: #2F71E5;
-      max-width: 168px;
+      background-color: #000;
+      max-width: 120px;
       width: 100%;
       min-height: 70px;
       color: #fff;

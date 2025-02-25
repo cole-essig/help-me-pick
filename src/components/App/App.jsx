@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import UserInput from '../UserInput/UserInput';
+import Header from '../Header/Header';
 import Table from '../Table/Table';
 import InteractButton from '../InteractButton/InteractButton';
 import Results from '../Results/Results';
@@ -15,7 +16,7 @@ function App() {
 
   return (
     <>
-      <h1>Hello you Fools!!</h1>
+      <Header />
       <UserInput getUserInput={getUserInput} />
       <Table table={table} />
       <InteractButton setMadeChoice={setMadeChoice} />

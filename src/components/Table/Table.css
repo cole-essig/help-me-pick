@@ -1,0 +1,20 @@
+.table {
+  margin: 20px auto;
+  border: 2px white solid;
+  border-radius: 8px;
+  max-width: 33vw;
+  width: 100%;
+}
+
+.table__header {
+  margin: 12px auto 0;
+  color: black;
+  text-decoration: underline;
+}
+
+.table__contents {
+    display: flex;
+    margin: 12px;
+    flex-direction: column;
+    gap: 5px;
+}
