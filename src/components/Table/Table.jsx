@@ -47,6 +47,7 @@ function Table({ setMadeChoice, setRandomPick, table, randomPick, madeChoice }) 
           setRandomPick={setRandomPick}
           setPickedItems={addPickedItems} 
           table={table}
+          pickedItems={pickedItems}
           onClick={onClick} 
         />
         {madeChoice && <Results randomPick={randomPick} madeChoice={madeChoice} />}

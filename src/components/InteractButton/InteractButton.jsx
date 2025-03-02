@@ -1,13 +1,15 @@
 import './InteractButton.css';
 import React from 'react';
 
-function InteractButton({ setMadeChoice, setRandomPick, setPickedItems, table, onClick }) {
+function InteractButton({ setMadeChoice, setRandomPick, setPickedItems, table, pickedItems, onClick }) {
     const getRandomItem = () => {
-        if (table.length > 0) {
-            return table[Math.floor((Math.random()*table.length))];
+        const nonPickedItems = table.filter(item => !pickedItems.includes(item))
+        if (nonPickedItems.length > 0) {
+            return nonPickedItems[Math.floor((Math.random()*nonPickedItems.length))];
         }
     }
     const buttonSubmit = (e) => {
+      setMadeChoice(false);
       e.preventDefault();
       const randomItem = getRandomItem();
       setRandomPick(randomItem);
