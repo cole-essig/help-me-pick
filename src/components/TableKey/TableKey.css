@@ -1,24 +1,29 @@
 .tablekey {
-    border: 2px white solid;
-    border-radius: 8px;
-    margin: 0 auto;
-    max-width: 30vw;
-    width: 100%;
-    text-overflow: ellipsis;
-    transition: box-shadow .2s linear;
-    transition: background-color .2s linear;
+  border: 2px white solid;
+  border-radius: 8px;
+  margin: 0 auto;
+  max-width: 30vw;
+  width: 100%;
+  text-overflow: ellipsis;
+  transition: box-shadow 0.2s linear;
+  transition: background-color 0.2s linear;
 }
 
 .tablekey_on {
-    background-color: black;
-    box-shadow: 0 0 10px 5px #fff; 
+  background-color: black;
+  box-shadow: 0 0 10px 5px #fff;
+}
+
+.tablekey_picked {
+  background-color: black;
+  box-shadow: 0 0 10px 5px #f60101;
 }
 
 .tablekey:hover {
-    box-shadow: 0 0 10px 5px #fff;
+  box-shadow: 0 0 10px 5px #fff;
 }
 
 .tablekey__content {
-    padding: 0;
-    margin: 3px auto;
+  padding: 0;
+  margin: 3px auto;
 }

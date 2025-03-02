@@ -7,6 +7,11 @@ import Results from '../Results/Results';
 
 function Table({ setMadeChoice, setRandomPick, table, randomPick, madeChoice }) {
     const [activeIndex, setActiveIndex] = useState(null);
+    const [pickedItems, setPickedItems] = useState([]);
+
+    const addPickedItems = (input) => {
+        setPickedItems((pickedItems) => [input, ...pickedItems])
+    }
 
     const startAnimation = () => {
         let index = 0;
@@ -18,7 +23,7 @@ function Table({ setMadeChoice, setRandomPick, table, randomPick, madeChoice }) 
         setTimeout(() => {
             clearInterval(interval);
             setActiveIndex(null); 
-        }, 5000);
+        }, 3000);
     };
     
     const onClick = () => {
@@ -30,13 +35,19 @@ function Table({ setMadeChoice, setRandomPick, table, randomPick, madeChoice }) 
         <h3 className='table__header'>Options</h3>
         <div className='table__contents'>
             {table.length > 0 && table.map((item, index) => {
-                return <TableKey key={index} content={item} activeIndex={activeIndex} index={index} />
+                let alreadyPicked = false
+                if (pickedItems.includes(item)) {
+                    alreadyPicked = true
+                }
+                return <TableKey key={index} content={item} activeIndex={activeIndex} index={index} alreadyPicked={alreadyPicked} />
             })}
         </div>
         <InteractButton 
           setMadeChoice={setMadeChoice} 
-          setRandomPick={setRandomPick} 
+          setRandomPick={setRandomPick}
+          setPickedItems={addPickedItems} 
           table={table}
+          pickedItems={pickedItems}
           onClick={onClick} 
         />
         {madeChoice && <Results randomPick={randomPick} madeChoice={madeChoice} />}
