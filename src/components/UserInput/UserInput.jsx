@@ -15,19 +15,19 @@ function UserInput({ getUserInput }) {
     }
     
         return(
-            <>
-            <form className="inputbar" onSubmit={handleSubmit} >
-                    <input 
-                        type='text'
-                        className='inputbar__input'
-                        id='inputBar'
-                        placeholder='Enter Option'
-                        value={input}
-                        onChange={handleInputBarChange}
-                    />
-                <button type="submit" className="inputbar__button" >New Option</button>
-            </form>
-            </>
+            <div className='input'>
+                <form className="inputbar" onSubmit={handleSubmit} >
+                        <input 
+                            type='text'
+                            className='inputbar__input'
+                            id='inputBar'
+                            placeholder='Enter Option'
+                            value={input}
+                            onChange={handleInputBarChange}
+                        />
+                    <button type="submit" className="inputbar__button" >New Option</button>
+                </form>
+            </div>
         )
     };
 

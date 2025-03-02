@@ -3,8 +3,9 @@ import { useState } from 'react';
 import React from 'react';
 import TableKey from '../TableKey/TableKey';
 import InteractButton from '../InteractButton/InteractButton';
+import Results from '../Results/Results';
 
-function Table({ setMadeChoice, setRandomPick, table }) {
+function Table({ setMadeChoice, setRandomPick, table, randomPick, madeChoice }) {
     const [activeIndex, setActiveIndex] = useState(null);
 
     const startAnimation = () => {
@@ -38,6 +39,7 @@ function Table({ setMadeChoice, setRandomPick, table }) {
           table={table}
           onClick={onClick} 
         />
+        {madeChoice && <Results randomPick={randomPick} madeChoice={madeChoice} />}
     </div>
     )
 }

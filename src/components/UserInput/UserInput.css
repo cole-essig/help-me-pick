@@ -1,86 +1,85 @@
 @keyframes pulse-shadow {
   0% {
-      box-shadow: 0 0 10px rgba(0, 0, 255, 0.4);
+    box-shadow: 0 0 10px rgba(0, 0, 255, 0.4);
   }
   100% {
-      box-shadow: 0 0 30px rgba(0, 0, 255, 0.9);
+    box-shadow: 0 0 30px rgba(0, 0, 255, 0.9);
   }
 }
 
 .inputbar {
-    position: relative;
-    max-width: 608px;
-    width: 100%;
-    margin: 0 auto 0;
-    padding: 0;
-    margin: auto;
+  position: relative;
+  max-width: 608px;
+  width: 100%;
+  padding: 0;
+  margin: auto;
+}
+
+.inputbar__input {
+  display: block;
+  width: 90%;
+  min-height: 68px;
+  border: 1px solid #ccc;
+  border-radius: 36px;
+  padding: 0 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: clip;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.inputbar__input:focus {
+  outline: none;
+  border: 1px solid transparent;
+}
+
+.inputbar__button {
+  background-color: #000;
+  max-width: 120px;
+  width: 100%;
+  min-height: 70px;
+  color: #fff;
+  border-radius: 36px;
+  border: none;
+  position: absolute;
+  right: 0;
+  top: -1px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.2;
+  transition: transform 0.25s linear;
+}
+
+.inputbar__button:hover {
+  animation: pulse-shadow 0.7s infinite alternate ease-in-out;
+}
+
+.inputbar__button {
+  top: 0;
+}
+
+@media screen and (max-width: 850px) {
+  .inputbar {
+    max-width: calc(100% - 320px);
   }
-  
+}
+
+@media screen and (max-width: 600px) {
+  .inputbar {
+    max-width: 85%;
+  }
+
   .inputbar__input {
-      display: block;
-      width: 90%; 
-      min-height: 68px;            
-      border: 1px solid #ccc; 
-      border-radius: 36px;  
-      padding: 0 20px;  
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: clip;  
-      font-size: 16px;
-      font-weight: 400;
-      line-height: 1.2;
-    }
-  
-    .inputbar__input:focus {
-      outline: none;      
-      border: 1px solid transparent;
-    }
-  
+    width: 100%;
+    padding: 0;
+  }
+
   .inputbar__button {
-      background-color: #000;
-      max-width: 120px;
-      width: 100%;
-      min-height: 70px;
-      color: #fff;
-      border-radius: 36px;
-      border: none;
-      position: absolute;
-      right: 0;
-      top: -1px;
-      cursor: pointer;
-      font-size: 18px;
-      font-weight: 400;
-      line-height: 1.2;
-      transition: transform .25s linear;
+    top: 80px;
+    right: 0;
+    max-width: 85vw;
   }
-  
-  .inputbar__button:hover {
-    animation: pulse-shadow .7s infinite alternate ease-in-out;
-  }
-  
-  .inputbar__button {
-    top: 0;
-  }
-  
-  @media screen and (max-width: 850px) {
-    .inputbar {
-      max-width: calc(100% - 320px);
-    }
-  }
-  
-  @media screen and (max-width: 600px) {
-    .inputbar {
-      max-width: 85%;
-    }
-  
-    .inputbar__input {
-      width: 100%;
-      padding: 0;
-    }
-  
-    .inputbar__button {
-      top: 80px;
-      right: 0;
-      max-width: 85vw;
-    }
-  }
+}

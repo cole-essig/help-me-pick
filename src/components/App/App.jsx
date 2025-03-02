@@ -2,7 +2,6 @@ import { useState } from 'react'
 import UserInput from '../UserInput/UserInput';
 import Header from '../Header/Header';
 import Table from '../Table/Table';
-import Results from '../Results/Results';
 import Footer from '../Footer/Footer';
 import './App.css'
 
@@ -16,13 +15,12 @@ function App() {
   }
 
   return (
-    <>
+    <div className='app'>
       <Header />
       <UserInput getUserInput={getUserInput} />
-      <Table setMadeChoice={setMadeChoice} setRandomPick={setRandomPick} table={table} />
-      {madeChoice && <Results randomPick={randomPick} madeChoice={madeChoice} />}
+      <Table setMadeChoice={setMadeChoice} setRandomPick={setRandomPick} table={table} randomPick={randomPick} madeChoice={madeChoice} />
       <Footer />
-    </>
+    </div>
   )
 }
 

@@ -1,16 +1,15 @@
 .interact-button {
-    position: relative;
-    background-color: #000;
-    margin-bottom: 15px;
-    max-width: 168px;
-    width: 100%;
-    min-height: 70px;
-    color: #fff;
-    border-radius: 36px;
-    border: none;
-    cursor: pointer;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 1.2;
-    transition: background-color .25s linear;
+  background-color: #000;
+  margin-bottom: 15px;
+  max-width: 168px;
+  width: 100%;
+  min-height: 70px;
+  color: #fff;
+  border-radius: 36px;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.2;
+  transition: background-color 0.25s linear;
 }
